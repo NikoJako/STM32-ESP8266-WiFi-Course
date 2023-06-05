@@ -1,0 +1,8 @@
+fifo.c:29:6:tx_fifo_init	1
+fifo.c:37:9:tx_fifo_put	2
+fifo.c:56:9:tx_fifo_get	2
+fifo.c:74:10:tx_fifo_size	1
+fifo.c:80:6:rx_fifo_init	1
+fifo.c:88:9:rx_fifo_put	2
+fifo.c:107:9:rx_fifo_get	2
+fifo.c:125:10:rx_fifo_size	1

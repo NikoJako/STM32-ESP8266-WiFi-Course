@@ -1,0 +1,22 @@
+C:/Users/njacobs/OneDrive/Udemy/STM32 Wifi Course/Documentation/F4_CHIP_HEADERS/Include/core_cm4.h:1688:22:__NVIC_EnableIRQ	16	static
+../Src/esp82xx_lib.c:71:6:esp82xx_init	16	static
+../Src/esp82xx_lib.c:133:16:esp82xx_reset	16	static
+../Src/esp82xx_lib.c:175:16:esp82xx_set_wifi_mode	24	static
+../Src/esp82xx_lib.c:205:16:esp82xx_list_access_points	16	static
+../Src/esp82xx_lib.c:227:16:esp82xx_join_wifi_access_point	24	static
+../Src/esp82xx_lib.c:257:16:esp82xx_get_local_ip_addr	16	static
+../Src/esp82xx_lib.c:282:9:esp82xx_create_tcp_connection	24	static
+../Src/esp82xx_lib.c:307:9:esp82xx_send_tcp_pckt	16	static
+../Src/esp82xx_lib.c:343:9:esp82xx_close_tcp_connection	16	static
+../Src/esp82xx_lib.c:367:16:esp82xx_dns_get_ip	24	static
+../Src/esp82xx_lib.c:396:13:esp_server_resp_srch_start	4	static
+../Src/esp82xx_lib.c:414:13:wait_resp	16	static
+../Src/esp82xx_lib.c:427:6:lc	16	static
+../Src/esp82xx_lib.c:438:13:search_check	24	static
+../Src/esp82xx_lib.c:462:13:esp_server_resp_srch_check	24	static
+../Src/esp82xx_lib.c:513:13:copy_software_to_hardware	16	static
+../Src/esp82xx_lib.c:531:13:uart_output_char	16	static
+../Src/esp82xx_lib.c:547:13:esp82xx_process_data	16	static
+../Src/esp82xx_lib.c:572:13:esp_uart_callback	8	static
+../Src/esp82xx_lib.c:579:6:USART1_IRQHandler	8	static
+../Src/esp82xx_lib.c:585:13:esp82xx_send_cmd	24	static
