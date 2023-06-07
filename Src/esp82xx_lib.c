@@ -308,10 +308,11 @@ uint8_t esp82xx_send_tcp_pckt(char * pckt)
 {
 	/*First combine the packet and command together in the same string (Set command)*/
 	sprintf((char *)temp_buffer, "AT+CIPSEND=%d\r\n",strlen(pckt));
+	//printf("temp buffer = %s\r\n", temp_buffer);
 
-	/*Send "AT+CIPSEND=<pckt lenght>"*/
+	/*Send "AT+CIPSEND=<pckt length>"*/
 	esp82xx_send_cmd(temp_buffer);
-	systick_delay_ms(50);
+	systick_delay_ms(500);
 
 	/*send packet (the actual data)*/
 	esp82xx_send_cmd(pckt);
@@ -324,7 +325,7 @@ uint8_t esp82xx_send_tcp_pckt(char * pckt)
 	/*wait for the response*/
 	while(server_search_resp_cmplt == false)
 	{
-		systick_delay_ms(1);
+		systick_delay_ms(3);
 		printf("Waiting for response to TCP packet, esp82xx_send_tcp_pckt\r\n");
 		if(server_search_resp_cmplt == false)
 		{
@@ -362,7 +363,7 @@ uint8_t esp82xx_close_tcp_connection(void)
 		num_of_try--;
 	}
 	/*if nothing works*/
-	printf("\r\r\n");
+	printf("\r\n");
 	printf("\r\nCouldn't close TCP Connection...\r\n");
 	return 0;
 }
