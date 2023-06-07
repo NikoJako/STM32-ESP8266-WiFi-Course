@@ -1131,7 +1131,7 @@ LOAD c:/st/stm32cubeide_1.8.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
                 0x0000000008002584                . = ALIGN (0x4)
                 0x0000000008002584                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000       0xdc load address 0x0000000008002584
+.data           0x0000000020000000       0xd8 load address 0x0000000008002584
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -1140,109 +1140,107 @@ LOAD c:/st/stm32cubeide_1.8.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
                 0x0000000020000000       0x10 ./Src/esp82xx_lib.o
                 0x0000000020000000                server_resp_sub_str
  .data.packet_to_send
-                0x0000000020000010       0x65 ./Src/main.o
+                0x0000000020000010       0x64 ./Src/main.o
                 0x0000000020000010                packet_to_send
- *fill*         0x0000000020000075        0x3 
  .data._impure_ptr
-                0x0000000020000078        0x4 c:/st/stm32cubeide_1.8.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-impure.o)
-                0x0000000020000078                _impure_ptr
+                0x0000000020000074        0x4 c:/st/stm32cubeide_1.8.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-impure.o)
+                0x0000000020000074                _impure_ptr
  .data.impure_data
-                0x000000002000007c       0x60 c:/st/stm32cubeide_1.8.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-impure.o)
+                0x0000000020000078       0x60 c:/st/stm32cubeide_1.8.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-impure.o)
  *(.RamFunc)
  *(.RamFunc*)
-                0x00000000200000dc                . = ALIGN (0x4)
-                0x00000000200000dc                _edata = .
+                0x00000000200000d8                . = ALIGN (0x4)
+                0x00000000200000d8                _edata = .
 
-.igot.plt       0x00000000200000dc        0x0 load address 0x0000000008002660
- .igot.plt      0x00000000200000dc        0x0 c:/st/stm32cubeide_1.8.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x00000000200000dc                . = ALIGN (0x4)
+.igot.plt       0x00000000200000d8        0x0 load address 0x000000000800265c
+ .igot.plt      0x00000000200000d8        0x0 c:/st/stm32cubeide_1.8.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x00000000200000d8                . = ALIGN (0x4)
 
-.bss            0x00000000200000dc      0xc78 load address 0x0000000008002660
-                0x00000000200000dc                _sbss = .
-                0x00000000200000dc                __bss_start__ = _sbss
+.bss            0x00000000200000d8      0xc78 load address 0x000000000800265c
+                0x00000000200000d8                _sbss = .
+                0x00000000200000d8                __bss_start__ = _sbss
  *(.bss)
- .bss           0x00000000200000dc       0x1c c:/st/stm32cubeide_1.8.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .bss           0x00000000200000d8       0x1c c:/st/stm32cubeide_1.8.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.bss*)
  .bss.server_resp_buffer
-                0x00000000200000f8      0x400 ./Src/esp82xx_lib.o
-                0x00000000200000f8                server_resp_buffer
- .bss.sub_str   0x00000000200004f8       0x20 ./Src/esp82xx_lib.o
-                0x00000000200004f8                sub_str
+                0x00000000200000f4      0x400 ./Src/esp82xx_lib.o
+                0x00000000200000f4                server_resp_buffer
+ .bss.sub_str   0x00000000200004f4       0x20 ./Src/esp82xx_lib.o
+                0x00000000200004f4                sub_str
  .bss.searching
-                0x0000000020000518        0x1 ./Src/esp82xx_lib.o
-                0x0000000020000518                searching
+                0x0000000020000514        0x1 ./Src/esp82xx_lib.o
+                0x0000000020000514                searching
  .bss.is_response
-                0x0000000020000519        0x1 ./Src/esp82xx_lib.o
-                0x0000000020000519                is_response
- *fill*         0x000000002000051a        0x2 
+                0x0000000020000515        0x1 ./Src/esp82xx_lib.o
+                0x0000000020000515                is_response
+ *fill*         0x0000000020000516        0x2 
  .bss.search_idx
-                0x000000002000051c        0x4 ./Src/esp82xx_lib.o
-                0x000000002000051c                search_idx
+                0x0000000020000518        0x4 ./Src/esp82xx_lib.o
+                0x0000000020000518                search_idx
  .bss.server_search_resp_cmplt
-                0x0000000020000520        0x1 ./Src/esp82xx_lib.o
-                0x0000000020000520                server_search_resp_cmplt
- *fill*         0x0000000020000521        0x3 
+                0x000000002000051c        0x1 ./Src/esp82xx_lib.o
+                0x000000002000051c                server_search_resp_cmplt
+ *fill*         0x000000002000051d        0x3 
  .bss.server_resp_search_idx
-                0x0000000020000524        0x4 ./Src/esp82xx_lib.o
-                0x0000000020000524                server_resp_search_idx
+                0x0000000020000520        0x4 ./Src/esp82xx_lib.o
+                0x0000000020000520                server_resp_search_idx
  .bss.server_resp_searching
-                0x0000000020000528        0x4 ./Src/esp82xx_lib.o
-                0x0000000020000528                server_resp_searching
+                0x0000000020000524        0x4 ./Src/esp82xx_lib.o
+                0x0000000020000524                server_resp_searching
  .bss.server_resp_idx
-                0x000000002000052c        0x4 ./Src/esp82xx_lib.o
-                0x000000002000052c                server_resp_idx
+                0x0000000020000528        0x4 ./Src/esp82xx_lib.o
+                0x0000000020000528                server_resp_idx
  .bss.temp_buffer
-                0x0000000020000530      0x400 ./Src/esp82xx_lib.o
-                0x0000000020000530                temp_buffer
- .bss.TX_FIFO   0x0000000020000930      0x400 ./Src/fifo.o
+                0x000000002000052c      0x400 ./Src/esp82xx_lib.o
+                0x000000002000052c                temp_buffer
+ .bss.TX_FIFO   0x000000002000092c      0x400 ./Src/fifo.o
  .bss.tx_put_itr
-                0x0000000020000d30        0x4 ./Src/fifo.o
-                0x0000000020000d30                tx_put_itr
+                0x0000000020000d2c        0x4 ./Src/fifo.o
+                0x0000000020000d2c                tx_put_itr
  .bss.tx_get_itr
-                0x0000000020000d34        0x4 ./Src/fifo.o
-                0x0000000020000d34                tx_get_itr
+                0x0000000020000d30        0x4 ./Src/fifo.o
+                0x0000000020000d30                tx_get_itr
  .bss.rx_put_itr
-                0x0000000020000d38        0x4 ./Src/fifo.o
-                0x0000000020000d38                rx_put_itr
+                0x0000000020000d34        0x4 ./Src/fifo.o
+                0x0000000020000d34                rx_put_itr
  .bss.rx_get_itr
-                0x0000000020000d3c        0x4 ./Src/fifo.o
-                0x0000000020000d3c                rx_get_itr
+                0x0000000020000d38        0x4 ./Src/fifo.o
+                0x0000000020000d38                rx_get_itr
  .bss.__sbrk_heap_end
-                0x0000000020000d40        0x4 ./Src/sysmem.o
+                0x0000000020000d3c        0x4 ./Src/sysmem.o
  .bss.__lock___malloc_recursive_mutex
-                0x0000000020000d44        0x1 c:/st/stm32cubeide_1.8.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-lock.o)
-                0x0000000020000d44                __lock___malloc_recursive_mutex
+                0x0000000020000d40        0x1 c:/st/stm32cubeide_1.8.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-lock.o)
+                0x0000000020000d40                __lock___malloc_recursive_mutex
  .bss.__lock___sfp_recursive_mutex
-                0x0000000020000d45        0x1 c:/st/stm32cubeide_1.8.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-lock.o)
-                0x0000000020000d45                __lock___sfp_recursive_mutex
+                0x0000000020000d41        0x1 c:/st/stm32cubeide_1.8.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-lock.o)
+                0x0000000020000d41                __lock___sfp_recursive_mutex
  .bss.__lock___sinit_recursive_mutex
-                0x0000000020000d46        0x1 c:/st/stm32cubeide_1.8.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-lock.o)
-                0x0000000020000d46                __lock___sinit_recursive_mutex
- *fill*         0x0000000020000d47        0x1 
+                0x0000000020000d42        0x1 c:/st/stm32cubeide_1.8.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-lock.o)
+                0x0000000020000d42                __lock___sinit_recursive_mutex
+ *fill*         0x0000000020000d43        0x1 
  .bss.__malloc_free_list
-                0x0000000020000d48        0x4 c:/st/stm32cubeide_1.8.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-mallocr.o)
-                0x0000000020000d48                __malloc_free_list
+                0x0000000020000d44        0x4 c:/st/stm32cubeide_1.8.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000020000d44                __malloc_free_list
  .bss.__malloc_sbrk_start
-                0x0000000020000d4c        0x4 c:/st/stm32cubeide_1.8.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-mallocr.o)
-                0x0000000020000d4c                __malloc_sbrk_start
- .bss.errno     0x0000000020000d50        0x4 c:/st/stm32cubeide_1.8.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-reent.o)
-                0x0000000020000d50                errno
+                0x0000000020000d48        0x4 c:/st/stm32cubeide_1.8.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000020000d48                __malloc_sbrk_start
+ .bss.errno     0x0000000020000d4c        0x4 c:/st/stm32cubeide_1.8.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-reent.o)
+                0x0000000020000d4c                errno
  *(COMMON)
-                0x0000000020000d54                . = ALIGN (0x4)
-                0x0000000020000d54                _ebss = .
-                0x0000000020000d54                __bss_end__ = _ebss
+                0x0000000020000d50                . = ALIGN (0x4)
+                0x0000000020000d50                _ebss = .
+                0x0000000020000d50                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x0000000020000d54      0x604 load address 0x0000000008002660
-                0x0000000020000d58                . = ALIGN (0x8)
- *fill*         0x0000000020000d54        0x4 
+                0x0000000020000d50      0x600 load address 0x000000000800265c
+                0x0000000020000d50                . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end = .)
-                0x0000000020000d58                PROVIDE (_end = .)
-                0x0000000020000f58                . = (. + _Min_Heap_Size)
- *fill*         0x0000000020000d58      0x200 
-                0x0000000020001358                . = (. + _Min_Stack_Size)
- *fill*         0x0000000020000f58      0x400 
-                0x0000000020001358                . = ALIGN (0x8)
+                0x0000000020000d50                PROVIDE (_end = .)
+                0x0000000020000f50                . = (. + _Min_Heap_Size)
+ *fill*         0x0000000020000d50      0x200 
+                0x0000000020001350                . = (. + _Min_Stack_Size)
+ *fill*         0x0000000020000f50      0x400 
+                0x0000000020001350                . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
