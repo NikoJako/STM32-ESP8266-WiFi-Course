@@ -99,7 +99,7 @@ void esp82xx_init(const char * ssid, const char * password)
 	}
 	else
 	{
-		printf("Reset was successful...\r\n");
+		printf("Reset was successful...\r\n\r\n");
 	}
 
 	if(esp82xx_set_wifi_mode(ESP8266_WIFI_MODE_STA) == 0)
@@ -108,7 +108,7 @@ void esp82xx_init(const char * ssid, const char * password)
 	}
 	else
 	{
-		printf("SetWiFiMode set successfully");
+		printf("\r\nSetWiFiMode set successfully\r\n");
 	}
 
 	esp82xx_list_access_points();
@@ -120,13 +120,13 @@ void esp82xx_init(const char * ssid, const char * password)
 	}
 	else
 	{
-		printf("WiFi Joined Successfully....\r\n");
+		printf("WiFi Joined Successfully....\r\n\r\n");
 	}
 
-	//esp82xx_get_local_ip_addr();
+	esp82xx_get_local_ip_addr();
 
 	/*Test getting the IP address of "google.com"*/
-	//esp82xx_dns_get_ip("google.com");
+	esp82xx_dns_get_ip("api.openweathermap.org");
 }
 
 /*Reset esp module*/
@@ -326,16 +326,19 @@ uint8_t esp82xx_send_tcp_pckt(char * pckt)
 	{
 		systick_delay_ms(1);
 		printf("Waiting for response to TCP packet, esp82xx_send_tcp_pckt\r\n");
+		if(server_search_resp_cmplt == false)
+		{
+			printf("Try again...\r\n");
+			return 0;
+
+		}
+		else
+		{
+			return 1;
+		}
 	}
 
-	if(server_search_resp_cmplt == false)
-	{
-		return 0;
-	}
-	else
-	{
-		return 1;
-	}
+
 
 }
 
@@ -349,17 +352,18 @@ uint8_t esp82xx_close_tcp_connection(void)
 	{
 		esp82xx_send_cmd("AT+CIPCLOSE\r\n");
 		systick_delay_ms(3000);
+		if(is_response)
+		{
+			/*success*/
+			printf("\r\nTCP Connection closed successfully...\r\n");
+			return 1;
+		}
+		/*decrement the # of tries*/
+		num_of_try--;
 	}
-
-	if(is_response)
-	{
-		/*success*/
-		return 1;
-	}
-	/*decrement the # of tries*/
-	num_of_try--;
-
 	/*if nothing works*/
+	printf("\r\r\n");
+	printf("\r\nCouldn't close TCP Connection...\r\n");
 	return 0;
 }
 
@@ -374,18 +378,18 @@ static uint8_t esp82xx_dns_get_ip(char *website)
 		sprintf((char *)temp_buffer, "AT+CIPDOMAIN=\"%s\"\r\n",website);
 		esp82xx_send_cmd(temp_buffer);
 		systick_delay_ms(3000);
-	}
 
-	if(is_response)
-	{
-		/*success*/
-		return 1;
+		if(is_response)
+		{
+			/*success*/
+			return 1;
+		}
+		/*decrement the # of tries*/
+		num_of_try--;
 	}
-	/*decrement the # of tries*/
-	num_of_try--;
-
 	/*if nothing works*/
 	return 0;
+
 }
 
 
